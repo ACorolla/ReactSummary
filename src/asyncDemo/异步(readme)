@@ -37,6 +37,13 @@ web Api?
 
 异步编程方法:
     回掉：callbackDemo
-    Promise:
+    Promise对象:Promise是一个返回值的代理。
+               异步方法包含一个原返回值的Promise对象。
+               它允许你为异步操作的成功返回值或失败信息指定出路方法。
+               Promise:状态：
+                pending: 初始状态。
+                fulfilled: 成功的操作
+                rejected: 失败的操作
+                settled: fulfilled or rejected
     Generator:
     async/await:
