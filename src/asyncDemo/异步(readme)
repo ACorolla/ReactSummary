@@ -45,5 +45,11 @@ web Api?
                 fulfilled: 成功的操作
                 rejected: 失败的操作
                 settled: fulfilled or rejected
-    Generator:
-    async/await:
+    Generator:生成器函数, 调用一个生成器函数并不会马上执行它的主体, 而是返回一个这个生成器的迭代器对象。
+              生成器对象通常和yield关键字同时使用. 函数执行到每个yield都会中断，并返回yield的右值(通过next方法返回对象中的value字段)。
+              下次调用net 函数会从yield的下一个语句继续执行。等到函数执行完，next方法返回的done字段会变成true.
+
+    async/await:async函数就是GeneratorFunction的语法糖。
+                await表示这里等待一个Promise返回结果, 再继续执行。
+                await后面跟着应该是一个Promise对象。
+
