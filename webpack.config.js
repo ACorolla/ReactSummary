@@ -3,7 +3,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: {
-    main: './src/virtualDom/dom.js'
+    main: './src/app.js'
   },
   output: {
     filename: 'js/[name].js',
@@ -20,6 +20,12 @@ module.exports = {
     rules: [
       {
         test: /\.js$/,
+        exclude: path.resolve(__dirname,'./node_modules/'),
+        include: path.resolve(__dirname,'./src/'),
+        loader: "babel-loader"
+      },
+      {
+        test: /\.jsx$/,
         exclude: path.resolve(__dirname,'./node_modules/'),
         include: path.resolve(__dirname,'./src/'),
         loader: "babel-loader"
